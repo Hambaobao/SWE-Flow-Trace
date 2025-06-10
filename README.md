@@ -24,3 +24,22 @@ sweflow-trace-python \
     --output-dir $OUTPUT_DIR # the directory to save the trace results
 
 ```
+
+## Testing
+
+To run the unit tests for this project:
+
+```bash
+# Install the package with test dependencies
+pip install -e ".[test]"
+
+# Run the tests
+pytest
+
+# Run the tests with verbose output
+pytest -v
+```
+
+The tests cover the main functionality of the project:
+- `CallTracer` class in the hooks module
+- Test collection and tracing functions in the trace module

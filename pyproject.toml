@@ -20,8 +20,14 @@ classifiers = [
 ]
 dependencies = []
 [project.optional-dependencies]
-test = ["pytest"]
+test = ["pytest", "pytest-mock"]
 
 [project.scripts]
 sweflow-hooks-python = "sweflow_trace.python.hooks:main"
 sweflow-trace-python = "sweflow_trace.python.trace:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
