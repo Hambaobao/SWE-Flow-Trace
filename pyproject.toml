@@ -12,14 +12,15 @@ description = "SWE-Flow trace for Any projects."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "Lei Zhang", email = "jameszhang2880@gmail.com" }]
-dependencies = []
 requires-python = ">=3.9"
-
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = []
+[project.optional-dependencies]
+test = ["pytest"]
 
 [project.scripts]
 sweflow-hooks-python = "sweflow_trace.python.hooks:main"
