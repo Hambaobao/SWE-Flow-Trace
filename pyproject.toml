@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["sweflow_trace*"]
+
+[project]
+name = "sweflow-trace"
+version = "0.1.0"
+description = "SWE-Flow trace for Any projects."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Lei Zhang", email = "jameszhang2880@gmail.com" }]
+dependencies = []
+requires-python = ">=3.9"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+sweflow-hooks-python = "sweflow_trace.python.hooks:main"
+sweflow-trace-python = "sweflow_trace.python.trace:main"
