@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Optional, Union
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -81,7 +81,7 @@ def collect_tests(
     output_dir: str,
     random: bool = False,
     random_seed: int = 42,
-    max_tests: int | None = None,
+    max_tests: Optional[int] = None,
     report_file: str = "tests-info.json",
 ) -> List[str]:
     """
@@ -218,8 +218,8 @@ def generate_test_traces(
     project_root: str,
     output_dir: str,
     tests: List[str],
-    max_workers: int | None = None,
-    temp_dir: str | None = None,
+    max_workers: Optional[int] = None,
+    temp_dir: Optional[str] = None,
 ) -> None:
     """
     Generate test traces.
