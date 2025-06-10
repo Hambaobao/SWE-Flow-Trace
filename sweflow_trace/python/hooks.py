@@ -1,5 +1,5 @@
 from types import FrameType
-from typing import Any
+from typing import Any, Optional, Union
 from pathlib import Path
 
 import os
@@ -12,7 +12,7 @@ import keyword
 
 class CallTracer:
 
-    def __init__(self, base_dir: str | None = None):
+    def __init__(self, base_dir: Optional[str] = None):
         self.base_dir = base_dir
         if base_dir is None:
             self.base_dir = os.getcwd()
